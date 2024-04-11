@@ -35,8 +35,7 @@ bool show_window = true;
 //setup basic stuff
 void setup()
 {
-    ofstream config;
-    config.open("/home/PythonicOS.cfg")
+    ofstream config("/home/PythonicOS.cfg");
     config << "" << endl;
     config.close();
 }

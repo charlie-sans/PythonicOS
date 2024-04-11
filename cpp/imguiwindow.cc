@@ -83,15 +83,14 @@ if (ImGui::Begin("window_name", &window))
 
   if (c130 == true ) {
     // write to a config file
-    ofstream myfile;
-    myfile.open ("/home/PythonicOS.cfg");
+    ofstream myfile("/home/PythonicOS.cfg");
     myfile << "setup = true" << endl;
     myfile.close();
 	}
 
 	}
 
-}
+
 ImGui::End();
 
 
