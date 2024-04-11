@@ -32,6 +32,15 @@ using namespace ImGui;
 bool show_window = true;
 
 
+//setup basic stuff
+void setup()
+{
+    ofstream config;
+    config.open("/home/PythonicOS.cfg")
+    config << "" << endl;
+    config.close();
+}
+
 vector<string> diriterator(string dir)
 {
    // open the directory using file operations
@@ -172,7 +181,8 @@ int main(int, char**)
         if (show_window)
         {
 
-            fileexplorer();
+            setup();
+            setupwindow();
         }
 
         // Rendering
