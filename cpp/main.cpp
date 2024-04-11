@@ -1,16 +1,4 @@
-#include "imgui.h"
-#include "imgui_impl_glfw.h"
-#include "imgui_impl_opengl3.h"
-#include "imguiwindow.cc"
-#include <stdio.h>
-
-#include <iostream>
-#include <vector>
-#include <dirent.h>
-
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <unistd.h>
+#include "main.hxx"
 #define GL_SILENCE_DEPRECATION
 #if defined(IMGUI_IMPL_OPENGL_ES2)
 #include <GLES2/gl2.h>
@@ -32,10 +20,12 @@ using namespace ImGui;
 bool show_window = true;
 
 
-//setup basic stuff
+//setup basic stuff 
+// such as setting up the config file
 void setup()
 {
-    ofstream config("/home/PythonicOS.cfg");
+    fstream config;
+    config.open("/home/PythonicOS.cfg");
     config << "" << endl;
     config.close();
 }

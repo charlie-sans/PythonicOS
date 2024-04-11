@@ -2,8 +2,10 @@
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 #include <iostream>
+#include <fstream>
 #include <vector>
 #include <dirent.h>
 
@@ -70,6 +72,7 @@ if (ImGui::Begin("window_name", &window))
 
 	ImGui::SetCursorPos(ImVec2(605.5,181.5));
 	static bool c130 = false;
+
 	ImGui::Checkbox("log?", &c130);
 
 	ImGui::SetCursorPos(ImVec2(559.5,247.5));
@@ -80,10 +83,11 @@ if (ImGui::Begin("window_name", &window))
   }
 	ImGui::SetCursorPos(ImVec2(231,328.5));
 	ImGui::Text("and our official package manager!");
-
+  // get the users
   if (c130 == true ) {
     // write to a config file
-    ofstream myfile("/home/PythonicOS.cfg");
+    fstream myfile;
+    myfile.open("/home/PythonicOS.cfg");
     myfile << "setup = true" << endl;
     myfile.close();
 	}
