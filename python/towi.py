@@ -9,7 +9,7 @@ import threading
 import traceback
 import logging
 import glob
-import websocket
+import websockets
 import os
 import time
 import sys
@@ -47,3 +47,4 @@ def ping(host):
     param = '-n' if platform.system().lower() == 'windows' else '-c'
     command = ['ping', param, '1', host]
     return subprocess.call(command) == 0
+

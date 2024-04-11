@@ -31,8 +31,9 @@ import threading
 import traceback
 import logging
 import glob
-import websocket
-###########
+import websockets
+import PySide6
+from PySide6 import QtCore, QtGui, QtWidgets
 
 
 ###########
@@ -44,7 +45,6 @@ from towi import websocket, internet,ping
 #
 
 #####
-
 
 
 def printslow(text):
@@ -66,3 +66,17 @@ def clear():
     else:
         os.system("clear")
         
+def printlogo():
+    # Print the logo from the .ans file
+    with open("logo.ans", "r") as f:
+        print(f.read())
+
+def main():
+    # Main function
+    clear()
+    printlogo()
+    print("Welcome to PythonicOS!")
+
+
+if __name__ == "__main__":
+    main()
