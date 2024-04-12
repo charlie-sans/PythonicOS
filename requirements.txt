@@ -71,7 +71,7 @@ httpx==0.24.1
 huggingface-hub==0.14.1
 hyperframe==6.0.1
 identify==2.5.24
-idna==3.4
+idna==3.7
 iniconfig==2.0.0
 iso8601==1.1.0
 isort==5.12.0
