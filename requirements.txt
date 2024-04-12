@@ -35,7 +35,7 @@ dataclasses==0.6
 dateutils==0.6.12
 distlib==0.3.6
 distro==1.8.0
-dnspython==2.3.0
+dnspython==2.6.1
 docker==6.1.2
 docutils==0.20.1
 duckduckgo-search==3.6.0
