@@ -1,6 +1,7 @@
 # PythonicOS
 
-
+# this repo has been left to die for sad reasons.
+## there is a new one that actualy tries to work and be something.
 
 PythonicOS is a Open Source Desktop/Display manager for linux
 # Contributing
